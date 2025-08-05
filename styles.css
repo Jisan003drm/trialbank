@@ -9,7 +9,9 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-image:;
+    background-image:url("BANK.jpg");
+    background-size: cover;
+    background-position: center;
     color: #333;
 }
 
@@ -120,3 +122,4 @@ footer a {
 footer a:hover {
     text-decoration: none;
 }
+
