@@ -1,0 +1,122 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image:;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* Navigation bar */
+nav {
+    background: #003366;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative; /* Needed for dropdown positioning */
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #0059b3;
+}
+
+/* Dropdown menu */
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #003366;
+    min-width: 180px;
+    z-index: 1000;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+nav ul li ul.dropdown li a {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+nav ul li ul.dropdown li a:hover {
+    background: #002244;
+}
+
+/* Show dropdown on hover */
+nav ul li:hover > ul.dropdown {
+    display: block;
+}
+
+/* Section style */
+section {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+section h1, section h2 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Footer style */
+footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
