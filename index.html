@@ -7,77 +7,79 @@
     <title>Malay Bank</title>
     </head>
     <body>
-    <header><h1>MALAY BANK</h1></header>
-     <nav>
-        <ul>
-            <li><a onclick="showPage('home')">HOME</a></li>
-            <li><a onclick="showPage('accounts')">ACCOUNTS</a>
-            <ul class="dropdown">
-                <li><a href="#" onclick="showPage('student-account')">Student Account</a></li>
-                <li><a href="#" onclick="showPage('saving-account')">Saving Account</a></li>
-                <li><a href="#" onclick="showPage('fdr')">FDR</a></li>
-                <li><a href="#" onclick="showPage('pension-account')">Pension Account</a></li>
-            </ul>
+    <div class="top-bar">
+        <div></div>
+        <div class="lang-mode-controls">
+            <select class="lang-select" id="lang-select">
+                <option value="en">English</option>
+                <option value="bn">Bengali</option>
+                <option value="ms">Malay</option>
+                <option value="th">Thai</option>
+                <option value="ta">Tamil</option>
+                <option value="zh">Chinese</option>
+            </select>
+            <button class="mode-toggle" id="mode-toggle" title="Toggle light/dark mode">🌙</button>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <header><h1>MALAY BANK</h1></header>
+         <nav>
+            <ul>
+                <li><a onclick="showPage('home')">HOME</a></li>
+                <li><a onclick="showPage('accounts')">ACCOUNTS</a>
+                <ul class="dropdown">
+                    <li><a href="#" onclick="showPage('student-account')">Student Account</a></li>
+                    <li><a href="#" onclick="showPage('saving-account')">Saving Account</a></li>
+                    <li><a href="#" onclick="showPage('fdr')">FDR</a></li>
+                    <li><a href="#" onclick="showPage('pension-account')">Pension Account</a></li>
+                </ul>
                 
-            <li><a onclick="showPage('loans')">LOAN</a>
+                <li><a onclick="showPage('loans')">LOAN</a>
+                
+                <ul class="dropdown">
+                    <li><a href="#" onclick="showPage('micro-loan')">Micro Loan</a></li>
+                    <li><a href="#" onclick="showPage('car-loan')">Car Loan</a></li>
+                    <li><a href="#" onclick="showPage('home-loan')">Home Loan</a></li>
+                </ul>
+                </li>
+                <li><a onclick="showPage('services')">SERVICES</a></li>
+                <li><a onclick="showPage('contact')">CONTACT</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">LOG IN</a>
+                    <ul class="dropdown">
+                        <li><a href="#" onclick="showPage('login-user')">User Login</a></li>
+                        <li><a href="#" onclick="showPage('login-admin')">Admin Login</a></li>
+                        <li><a href="#" onclick="showPage('login-employee')">Employee Login</a></li>
+                        <li><a href="#" onclick="showPage('forgot-password')">Forgot Password?</a></li>
+                        <li><a href="#" onclick="showPage('register')">Register New Account</a></li>
+                    </ul>
+                </li>
             
-            <ul class="dropdown">
-                <li><a href="#" onclick="showPage('micro-loan')">Micro Loan</a></li>
-                <li><a href="#" onclick="showPage('car-loan')">Car Loan</a></li>
-                <li><a href="#" onclick="showPage('home-loan')">Home Loan</a></li>
-            </ul>
-            </li>
-            <li><a onclick="showPage('services')">SERVICES</a></li>
-            <li><a onclick="showPage('contact')">CONTACT</a></li>
-         
-         </ul>
-        </nav>
-    <section id="home">
-        
-        <h2>Welcome to Malay bank . we are one of the biggest bank in malaysia . we are ready to serve you unconditionally.</h2>
-         <p>
-        Established in 1998, <strong>Malay Bank</strong> has grown from a small regional bank in Kuala Lumpur 
-        into one of Malaysia’s most trusted financial institutions.  
-        For over two decades, we have been committed to providing secure, reliable, and innovative banking 
-        solutions to individuals, businesses, and communities across the nation.
-    </p>
-
-    <p>
-        Our journey began with a simple mission – to make banking easier and more accessible for everyone. 
-        Over the years, we have introduced modern banking technologies such as 
-        <em>online banking</em>, <em>mobile banking apps</em>, and <em>instant fund transfers</em>, 
-        all while maintaining the personal touch that our customers value.  
-    </p>
-
-    <p>
-        Today, Malay Bank operates across Malaysia with multiple branches and ATM networks, 
-        offering services ranging from savings and current accounts to personal, business, and 
-        housing loans. Our focus on customer care, transparency, and community development 
-        continues to drive our success.  
-    </p>
-
-    <p>
-        At Malay Bank, we believe in more than just numbers – we believe in building a brighter financial future 
-        for every Malaysian.
-    </p>
-        
+             </ul>
+            </nav>
+        <section id="home">
+            <h2 id="home-title">Welcome to Malay bank . we are one of the biggest bank in malaysia . we are ready to serve you unconditionally.</h2>
+            <p id="home-1">Established in 1998, <strong>Malay Bank</strong> has grown from a small regional bank in Kuala Lumpur into one of Malaysia’s most trusted financial institutions.  For over two decades, we have been committed to providing secure, reliable, and innovative banking solutions to individuals, businesses, and communities across the nation.</p>
+            <p id="home-2">Our journey began with a simple mission – to make banking easier and more accessible for everyone. Over the years, we have introduced modern banking technologies such as <em>online banking</em>, <em>mobile banking apps</em>, and <em>instant fund transfers</em>, all while maintaining the personal touch that our customers value.</p>
+            <p id="home-3">Today, Malay Bank operates across Malaysia with multiple branches and ATM networks, offering services ranging from savings and current accounts to personal, business, and housing loans. Our focus on customer care, transparency, and community development continues to drive our success.</p>
+            <p id="home-4">At Malay Bank, we believe in more than just numbers – we believe in building a brighter financial future for every Malaysian.</p>
         </section>
-    
-    <section id="accounts">
-    <h1>Our Accounts</h1>
-    <p>
-        At Malay Bank, we offer a variety of accounts designed to meet different needs:
-    </p>
-    <ul>
-        <li><strong>Savings Account</strong> – Earn interest while keeping your funds accessible.</li>
-        <li><strong>Current Account</strong> – Perfect for daily transactions and business needs.</li>
-        <li><strong>Fixed Deposit</strong> – Lock in your funds for higher returns.</li>
-    </ul>
-    <p>
-        Whether you’re saving for the future, managing business expenses, or securing your retirement, 
-        Malay Bank has the right account for you.
-    </p>
-</section>
+        
+        <section id="accounts">
+        <h1>Our Accounts</h1>
+        <p>
+            At Malay Bank, we offer a variety of accounts designed to meet different needs:
+        </p>
+        <ul>
+            <li><strong>Savings Account</strong> – Earn interest while keeping your funds accessible.</li>
+            <li><strong>Current Account</strong> – Perfect for daily transactions and business needs.</li>
+            <li><strong>Fixed Deposit</strong> – Lock in your funds for higher returns.</li>
+        </ul>
+        <p>
+            Whether you’re saving for the future, managing business expenses, or securing your retirement, 
+            Malay Bank has the right account for you.
+        </p>
+    </section>
 
 <section id="loans">
     <h1>Loan Options</h1>
@@ -111,20 +113,30 @@
     </p>
 </section>
 
-<section id="contact">
-    <h1>Contact Us</h1>
-    <p>
-        Have questions or need assistance? Our customer care team is here to help.
-    </p>
-    <p>
-        <strong>Address:</strong> Malay Bank Headquarters, Kuala Lumpur, Malaysia<br>
-        <strong>Phone:</strong> +60 3-1234 5678<br>
-        <strong>Email:</strong> support@shaoabank.com
-    </p>
-    <p>
-        Visit your nearest Malay Bank branch or connect with us through our official mobile app for faster support.
-    </p>
-</section>
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>
+            Have questions or need assistance? Our customer care team is here to help.
+        </p>
+        <p>
+            <strong>Address:</strong> Malay Bank Headquarters, Kuala Lumpur, Malaysia<br>
+            <strong>Phone:</strong> +60 3-1234 5678<br>
+            <strong>Email:</strong> support@shaoabank.com
+        </p>
+        <p>
+            Visit your nearest Malay Bank branch or connect with us through our official mobile app for faster support.
+        </p>
+        <form id="contact-form" class="contact-form" style="margin-top:20px;">
+            <label for="user-name">Your Name:</label>
+            <input type="text" id="user-name" name="user-name" required>
+            <label for="user-email">Your Email:</label>
+            <input type="email" id="user-email" name="user-email" required>
+            <label for="user-message">Message:</label>
+            <textarea id="user-message" name="user-message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+            <div id="message-sent" style="display:none; color:green; margin-top:10px;">Message sent! Thank you for contacting us.</div>
+        </form>
+    </section>
         
         <!-- STUDENT ACCOUNT -->
 <section id="student-account">
@@ -232,18 +244,84 @@
 </section>
 
 
-<footer style="background:#004080; color:white; text-align:center; padding:20px;">
-         <p><strong>Malay Bank</strong> – Empowering Your Financial Future</p>
-    <p>Headquarters: Kuala Lumpur, Malaysia | Phone: +60 3-1234 5678 | Email: support@shaoabank.com</p>
-    <p><a href="#" style="color:white; text-decoration:underline;">Privacy Policy</a> | 
-       <a href="#" style="color:white; text-decoration:underline;">Terms & Conditions</a></p>
-    <p>&copy; 2025 Malay. All rights reserved.</p>
-        </footer>
-     <script src="script.js"></script>   
+
+    </div>
+    <footer style="background:#004080; color:white; text-align:center; padding:20px;">
+        <p><strong>Malay Bank</strong> – Empowering Your Financial Future</p>
+        <p>Headquarters: Kuala Lumpur, Malaysia | Phone: +60 3-1234 5678 | Email: support@shaoabank.com</p>
+        <p><a href="#" style="color:white; text-decoration:underline;">Privacy Policy</a> | 
+        <a href="#" style="color:white; text-decoration:underline;">Terms & Conditions</a></p>
+        <p>&copy; 2025 Malay. All rights reserved.</p>
+    </footer>
+        <script>
+        // Light/Dark mode toggle
+        const modeToggle = document.getElementById('mode-toggle');
+        modeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+        // Language selector with translations
+        const langSelect = document.getElementById('lang-select');
+        const translations = {
+            en: {
+                homeTitle: 'Welcome to Malay bank . we are one of the biggest bank in malaysia . we are ready to serve you unconditionally.',
+                home1: 'Established in 1998, <strong>Malay Bank</strong> has grown from a small regional bank in Kuala Lumpur into one of Malaysia’s most trusted financial institutions.  For over two decades, we have been committed to providing secure, reliable, and innovative banking solutions to individuals, businesses, and communities across the nation.',
+                home2: 'Our journey began with a simple mission – to make banking easier and more accessible for everyone. Over the years, we have introduced modern banking technologies such as <em>online banking</em>, <em>mobile banking apps</em>, and <em>instant fund transfers</em>, all while maintaining the personal touch that our customers value.',
+                home3: 'Today, Malay Bank operates across Malaysia with multiple branches and ATM networks, offering services ranging from savings and current accounts to personal, business, and housing loans. Our focus on customer care, transparency, and community development continues to drive our success.',
+                home4: 'At Malay Bank, we believe in more than just numbers – we believe in building a brighter financial future for every Malaysian.',
+            },
+            bn: {
+                homeTitle: 'মালয় ব্যাংকে স্বাগতম। আমরা মালয়েশিয়ার অন্যতম বৃহত্তম ব্যাংক। আমরা আপনাকে নিঃশর্তভাবে সেবা দিতে প্রস্তুত।',
+                home1: '১৯৯৮ সালে প্রতিষ্ঠিত, <strong>মালয় ব্যাংক</strong> কুয়ালালামপুরে একটি ছোট আঞ্চলিক ব্যাংক থেকে মালয়েশিয়ার সবচেয়ে বিশ্বস্ত আর্থিক প্রতিষ্ঠানে পরিণত হয়েছে। দুই দশকেরও বেশি সময় ধরে, আমরা ব্যক্তিগত, ব্যবসায়িক এবং সম্প্রদায়ের জন্য নিরাপদ, নির্ভরযোগ্য এবং উদ্ভাবনী ব্যাংকিং সেবা দিয়ে আসছি।',
+                home2: 'আমাদের যাত্রা শুরু হয়েছিল একটি সহজ লক্ষ্য নিয়ে – সবার জন্য ব্যাংকিং সহজ ও সহজলভ্য করা। আমরা <em>অনলাইন ব্যাংকিং</em>, <em>মোবাইল অ্যাপ</em>, এবং <em>তাৎক্ষণিক ফান্ড ট্রান্সফার</em> চালু করেছি, সবসময় গ্রাহকদের ব্যক্তিগত স্পর্শ বজায় রেখে।',
+                home3: 'আজ, মালয় ব্যাংক মালয়েশিয়া জুড়ে বহু শাখা ও এটিএম নেটওয়ার্ক পরিচালনা করছে, যেখানে সঞ্চয়, চলতি হিসাব, ব্যক্তিগত, ব্যবসায়িক ও হাউজিং ঋণসহ নানা সেবা রয়েছে। গ্রাহকসেবা, স্বচ্ছতা ও কমিউনিটি ডেভেলপমেন্টে আমাদের মনোযোগ আমাদের সফলতার চালিকাশক্তি।',
+                home4: 'মালয় ব্যাংকে আমরা শুধু সংখ্যার চেয়ে বেশি কিছুতে বিশ্বাস করি – আমরা প্রতিটি মালয়েশিয়ানের জন্য উজ্জ্বল আর্থিক ভবিষ্যত গড়ে তুলতে বিশ্বাসী।',
+            },
+            ms: {
+                homeTitle: 'Selamat datang ke Malay Bank. Kami adalah salah satu bank terbesar di Malaysia. Kami sedia berkhidmat untuk anda tanpa syarat.',
+                home1: 'Ditubuhkan pada tahun 1998, <strong>Malay Bank</strong> telah berkembang dari sebuah bank serantau kecil di Kuala Lumpur menjadi salah satu institusi kewangan paling dipercayai di Malaysia. Selama lebih dua dekad, kami komited untuk menyediakan penyelesaian perbankan yang selamat, boleh dipercayai dan inovatif kepada individu, perniagaan dan komuniti di seluruh negara.',
+                home2: 'Perjalanan kami bermula dengan misi mudah – untuk memudahkan perbankan untuk semua orang. Sepanjang tahun, kami telah memperkenalkan teknologi perbankan moden seperti <em>perbankan dalam talian</em>, <em>aplikasi mudah alih</em>, dan <em>pemindahan dana segera</em>, sambil mengekalkan sentuhan peribadi yang dihargai pelanggan kami.',
+                home3: 'Hari ini, Malay Bank beroperasi di seluruh Malaysia dengan pelbagai cawangan dan rangkaian ATM, menawarkan perkhidmatan daripada akaun simpanan dan semasa kepada pinjaman peribadi, perniagaan dan perumahan. Fokus kami pada penjagaan pelanggan, ketelusan dan pembangunan komuniti terus memacu kejayaan kami.',
+                home4: 'Di Malay Bank, kami percaya pada lebih daripada sekadar angka – kami percaya dalam membina masa depan kewangan yang lebih cerah untuk setiap rakyat Malaysia.',
+            },
+            th: {
+                homeTitle: 'ยินดีต้อนรับสู่ Malay Bank เราเป็นหนึ่งในธนาคารที่ใหญ่ที่สุดในมาเลเซีย พร้อมให้บริการคุณอย่างไม่มีเงื่อนไข',
+                home1: 'ก่อตั้งขึ้นในปี 1998 <strong>Malay Bank</strong> ได้เติบโตจากธนาคารภูมิภาคเล็ก ๆ ในกัวลาลัมเปอร์ สู่สถาบันการเงินที่น่าเชื่อถือที่สุดแห่งหนึ่งของมาเลเซีย ตลอดเวลากว่าสองทศวรรษ เรามุ่งมั่นที่จะให้บริการทางการเงินที่ปลอดภัย เชื่อถือได้ และสร้างสรรค์แก่บุคคล ธุรกิจ และชุมชนทั่วประเทศ',
+                home2: 'การเดินทางของเราเริ่มต้นด้วยภารกิจง่าย ๆ – ทำให้การธนาคารง่ายและเข้าถึงได้สำหรับทุกคน ตลอดหลายปีที่ผ่านมา เราได้แนะนำเทคโนโลยีการธนาคารสมัยใหม่ เช่น <em>ธนาคารออนไลน์</em> <em>แอปมือถือ</em> และ <em>โอนเงินทันที</em> พร้อมกับรักษาความเป็นกันเองที่ลูกค้าของเราชื่นชอบ',
+                home3: 'ปัจจุบัน Malay Bank ดำเนินงานทั่วมาเลเซียด้วยสาขาและเครือข่าย ATM มากมาย ให้บริการตั้งแต่บัญชีออมทรัพย์และกระแสรายวันไปจนถึงสินเชื่อส่วนบุคคล ธุรกิจ และที่อยู่อาศัย ความใส่ใจลูกค้า ความโปร่งใส และการพัฒนาชุมชนยังคงเป็นแรงผลักดันความสำเร็จของเรา',
+                home4: 'ที่ Malay Bank เราเชื่อมากกว่าตัวเลข – เราเชื่อในการสร้างอนาคตทางการเงินที่สดใสสำหรับชาวมาเลเซียทุกคน',
+            }
+        };
+        function setLang(lang) {
+            const t = translations[lang] || translations['en'];
+            document.getElementById('home-title').innerHTML = t.homeTitle;
+            document.getElementById('home-1').innerHTML = t.home1;
+            document.getElementById('home-2').innerHTML = t.home2;
+            document.getElementById('home-3').innerHTML = t.home3;
+            document.getElementById('home-4').innerHTML = t.home4;
+        }
+        langSelect.addEventListener('change', function() {
+                document.documentElement.lang = langSelect.value;
+                setLang(langSelect.value);
+        });
+        // On load, set default language
+        setLang(langSelect.value);
+        // Contact form message sent
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        document.getElementById('message-sent').style.display = 'block';
+                        contactForm.reset();
+                        setTimeout(() => {
+                                document.getElementById('message-sent').style.display = 'none';
+                        }, 4000);
+                });
+        }
+        </script>
     </body>
 
 </html>
-
 
 
 
