@@ -7,22 +7,23 @@
     <title>Malay Bank</title>
     </head>
     <body>
-    <div class="top-bar">
-        <div></div>
-        <div class="lang-mode-controls">
-            <select class="lang-select" id="lang-select">
-                <option value="en">English</option>
-                <option value="bn">Bengali</option>
-                <option value="ms">Malay</option>
-                <option value="th">Thai</option>
-                <option value="ta">Tamil</option>
-                <option value="zh">Chinese</option>
-            </select>
-            <button class="mode-toggle" id="mode-toggle" title="Toggle light/dark mode">🌙</button>
-        </div>
-    </div>
     <div class="content-wrapper">
-        <header><h1>MALAY BANK</h1></header>
+        <header>
+            <div class="header-flex">
+                <div class="lang-mode-controls">
+                    <select class="lang-select" id="lang-select">
+                        <option value="en">English</option>
+                        <option value="bn">Bengali</option>
+                        <option value="ms">Malay</option>
+                        <option value="th">Thai</option>
+                        <option value="ta">Tamil</option>
+                        <option value="zh">Chinese</option>
+                    </select>
+                    <button class="mode-toggle" id="mode-toggle" title="Toggle light/dark mode">🌙</button>
+                </div>
+                <h1 style="margin:0 auto;">MALAY BANK</h1>
+            </div>
+        </header>
          <nav>
             <ul>
                 <li><a onclick="showPage('home')">HOME</a></li>
@@ -253,16 +254,17 @@
         <a href="#" style="color:white; text-decoration:underline;">Terms & Conditions</a></p>
         <p>&copy; 2025 Malay. All rights reserved.</p>
     </footer>
-        <script>
-        // Light/Dark mode toggle
-        const modeToggle = document.getElementById('mode-toggle');
-        modeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-        });
-        // Language selector with translations
-        const langSelect = document.getElementById('lang-select');
-        const translations = {
+            <script>
+            // Light/Dark mode toggle
+            document.addEventListener('DOMContentLoaded', function() {
+                const modeToggle = document.getElementById('mode-toggle');
+                modeToggle.addEventListener('click', function() {
+                    document.body.classList.toggle('dark-mode');
+                    modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+                });
+                // Language selector with translations
+                const langSelect = document.getElementById('lang-select');
+                const translations = {
             en: {
                 homeTitle: 'Welcome to Malay bank . we are one of the biggest bank in malaysia . we are ready to serve you unconditionally.',
                 home1: 'Established in 1998, <strong>Malay Bank</strong> has grown from a small regional bank in Kuala Lumpur into one of Malaysia’s most trusted financial institutions.  For over two decades, we have been committed to providing secure, reliable, and innovative banking solutions to individuals, businesses, and communities across the nation.',
@@ -292,32 +294,33 @@
                 home4: 'ที่ Malay Bank เราเชื่อมากกว่าตัวเลข – เราเชื่อในการสร้างอนาคตทางการเงินที่สดใสสำหรับชาวมาเลเซียทุกคน',
             }
         };
-        function setLang(lang) {
+          function setLang(lang) {
             const t = translations[lang] || translations['en'];
             document.getElementById('home-title').innerHTML = t.homeTitle;
             document.getElementById('home-1').innerHTML = t.home1;
             document.getElementById('home-2').innerHTML = t.home2;
             document.getElementById('home-3').innerHTML = t.home3;
             document.getElementById('home-4').innerHTML = t.home4;
-        }
-        langSelect.addEventListener('change', function() {
-                document.documentElement.lang = langSelect.value;
-                setLang(langSelect.value);
+          }
+          langSelect.addEventListener('change', function() {
+              document.documentElement.lang = langSelect.value;
+              setLang(langSelect.value);
+          });
+          // On load, set default language
+          setLang(langSelect.value);
+          // Contact form message sent
+          const contactForm = document.getElementById('contact-form');
+          if (contactForm) {
+              contactForm.addEventListener('submit', function(e) {
+                  e.preventDefault();
+                  document.getElementById('message-sent').style.display = 'block';
+                  contactForm.reset();
+                  setTimeout(() => {
+                      document.getElementById('message-sent').style.display = 'none';
+                  }, 4000);
+              });
+          }
         });
-        // On load, set default language
-        setLang(langSelect.value);
-        // Contact form message sent
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        document.getElementById('message-sent').style.display = 'block';
-                        contactForm.reset();
-                        setTimeout(() => {
-                                document.getElementById('message-sent').style.display = 'none';
-                        }, 4000);
-                });
-        }
         </script>
     </body>
 
