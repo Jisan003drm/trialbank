@@ -1,3 +1,55 @@
+/* Header flex for controls and title */
+.header-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    gap: 1.5rem;
+}
+.header-flex h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+.lang-mode-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+}
+.lang-select {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
+}
+.dark-mode .lang-select {
+    background: #232946;
+    color: #fff;
+    border: 1px solid #393e5c;
+}
+.mode-toggle {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #222;
+    font-size: 1.1rem;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.dark-mode .mode-toggle {
+    color: #fff;
+    border: 1px solid #393e5c;
+}
+.mode-toggle:hover {
+    background: #e0e0e0;
+}
+.dark-mode .mode-toggle:hover {
+    background: #393e5c;
+}
 /* --- Responsive Styles --- */
 @media (max-width: 700px) {
     nav ul {
