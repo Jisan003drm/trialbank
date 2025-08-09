@@ -229,10 +229,24 @@ footer {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-image:url("BANK.jpg");
+    background-image: url("bank.jpg");
     background-size: cover;
     background-position: center;
     color: #333;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* Header */
@@ -251,6 +265,8 @@ header h1 {
 /* Navigation bar */
 nav {
     background: #003366;
+    position: relative;
+    z-index: 3;
 }
 
 nav ul {
@@ -308,11 +324,12 @@ nav ul li:hover > ul.dropdown {
 section {
     padding: 30px 20px;
     max-width: 900px;
-    margin: auto;
-    background: white;
-    margin-top: 20px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    margin: 40px auto 0 auto;
+    background: rgba(255,255,255,0.97);
+    border-radius: 12px;
+    box-shadow: 0px 4px 24px 4px rgba(0,0,0,0.13);
+    position: relative;
+    z-index: 2;
 }
 
 section h1, section h2 {
