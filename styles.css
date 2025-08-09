@@ -1,3 +1,27 @@
+.main-title {
+    margin: 0 auto;
+}
+.contact-form-margin {
+    margin-top: 20px;
+}
+.message-sent {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+.main-footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.footer-link {
+    color: white;
+    text-decoration: underline;
+}
+.footer-link:hover {
+    text-decoration: none;
+}
 /* Header flex for controls and title */
 .header-flex {
     display: flex;
@@ -318,3 +342,4 @@ footer a {
 footer a:hover {
     text-decoration: none;
 }
+
