@@ -1,3 +1,127 @@
+/* --- Responsive Styles --- */
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    nav ul li a {
+        padding: 12px 10px;
+        font-size: 1rem;
+    }
+    section {
+        padding: 18px 6px;
+        max-width: 100%;
+        margin-top: 12px;
+    }
+    header {
+        padding: 12px 4px;
+    }
+    .content-wrapper {
+        padding: 0 2px;
+    }
+}
+
+/* --- Light/Dark Mode --- */
+:root {
+    --main-bg: #f6f8fa;
+    --main-text: #222;
+    --header-bg: #004080;
+    --header-text: #fff;
+    --nav-bg: #003366;
+    --nav-hover: #0059b3;
+    --section-bg: #fff;
+    --footer-bg: #004080;
+    --footer-text: #fff;
+}
+
+.dark-mode {
+    --main-bg: #181c24;
+    --main-text: #e0e0e0;
+    --header-bg: #232946;
+    --header-text: #fff;
+    --nav-bg: #121629;
+    --nav-hover: #393e5c;
+    --section-bg: #232946;
+    --footer-bg: #232946;
+    --footer-text: #fff;
+}
+
+body {
+    background: var(--main-bg);
+    color: var(--main-text);
+}
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+}
+nav {
+    background: var(--nav-bg);
+}
+nav ul li a {
+    color: var(--header-text);
+}
+nav ul li a:hover {
+    background: var(--nav-hover);
+    color: var(--header-text);
+}
+section {
+    background: var(--section-bg);
+    color: var(--main-text);
+}
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+}
+footer a {
+    color: var(--footer-text);
+}
+
+/* --- Language Selector & Mode Toggle --- */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.lang-mode-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.lang-select {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
+}
+.dark-mode .lang-select {
+    background: #232946;
+    color: #fff;
+    border: 1px solid #393e5c;
+}
+.mode-toggle {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #222;
+    font-size: 1.1rem;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.dark-mode .mode-toggle {
+    color: #fff;
+    border: 1px solid #393e5c;
+}
+.mode-toggle:hover {
+    background: #e0e0e0;
+}
+.dark-mode .mode-toggle:hover {
+    background: #393e5c;
+}
 /* Content wrapper for sticky footer */
 .content-wrapper {
     flex: 1 0 auto;
